@@ -1,0 +1,66 @@
+$$Include<InOut>
+$$Include<Arithme>
+$$include<InOut>
+ALGORITHME Isil_1_d
+Var
+
+
+/* jjjj fvdhf
+fvdfgnkdjn  jjhuj */
+fonction sami(b1:entier.b2:reel):chaiNe
+var
+ x.y[5].z:entier# 
+t.const A:reel#
+debut
+ecrire("sami wa baka")#
+tantque(i>=j)
+faire
+A :=2 #
+B :=A/0#
+A :=C+D #
+fait
+tantque(i>j)
+faire
+A :=2 #
+A :=C+D #
+fait
+fin
+fonction sami2(b1:chaine.b3:entier):reel
+var
+debut
+tantque(i<=j)
+faire
+A :=2 #
+A :=C+D #
+fait
+tantque(i<j)
+faire
+A :=2 #
+A :=C+D #
+fait
+fin
+b[2].f:chaine#
+
+
+
+debut
+ sami[25]:=A+B#
+tantque(y!=v)
+faire
+A :=2 #
+A :=C+D #
+
+Tab[2] :=a+b/2 #
+fait
+  f:=5#
+
+Fonct1(x.y)#
+Fonct2(x)#
+Fonct3()#
+lire()#
+lire(s)#
+LIRE(x.y) #
+return n#
+
+
+fin
