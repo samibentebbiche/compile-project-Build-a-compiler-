@@ -57,8 +57,7 @@ ALGORITHME return mc_algorithme;
 {MC_REEL} {yylval.str=strdup(yytext);  return mc_reel;}
 {MC_CHAINE} return mc_chaine;
 {STRING} return string;
-{MC_CONST} return mc_cst;
-
+{MC_CONST} return mc_const;
 {IDF} {yylval.str=strdup(yytext);   inserer(yytext,"idf");  
     yylval.str=strdup(yytext); 
     if(yyleng<=12) return idf;

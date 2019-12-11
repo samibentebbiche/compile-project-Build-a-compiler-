@@ -1,7 +1,8 @@
 %{  
   
-#include"tabl_symb.h"
-   int yyerror();  
+#include"tabl_symb.c"
+   int yyerror(){
+   };  
    %}
    
    %union
@@ -9,20 +10,15 @@
    char* str ;
    float reel ; }
 
-
-%token bib mc_algorithme mc_fonction <str>idf mc_var mc_debut mc_fin err guillemet mc_return operateur operande deuxPoint mc_entier mc_reel mc_chaine string pouvrant pfermant mc_tq mc_faire mc_fait mc_ecrire mc_lire point hashtag <entier>cst crochouvrant crochfermant nombre aff exp_arthim compar val
+%token bib mc_algorithme mc_fonction <str>idf mc_var mc_debut mc_fin err guillemet mc_return operateur  deuxPoint mc_entier mc_reel mc_chaine string pouvrant pfermant mc_tq mc_faire mc_fait mc_ecrire mc_lire point hashtag <entier>nombre mc_const crochouvrant crochfermant  aff exp_arthim compar val
 %%
 
  S: bib mc_algorithme idf DECL CORPS{printf("syntaxe correcte");          	            YYACCEPT;}
  ;
- DECL: mc_var
- SUIT_FONCT BLOC_VAR
+ DECL: mc_var SUIT_FONCT BLOC_VAR
+     |mc_var FONCT
+     |mc_var BLOC_VAR
      |mc_var
-     FONCT
-     |mc_var
-     BLOC_VAR
-     |mc_var
-    
      |
  ;
 SUIT_FONCT: FONCT SUIT_FONCT
@@ -44,7 +40,7 @@ SUIT_FONCT: FONCT SUIT_FONCT
  ;
  IDF_VAR: idf VARIABLE
           |TAB VARIABLE
-          |cst idf VARIABLE
+          |mc_const idf VARIABLE
  ;
  VARIABLE: point IDF_VAR
           |deuxPoint mc_reel hashtag
@@ -62,7 +58,7 @@ SUIT_FONCT: FONCT SUIT_FONCT
  AFFECTATION:idf aff TRAITEMENT hashtag
              |TAB aff TRAITEMENT hashtag
  ;
- TRAITEMENT:exp_arthim
+ TRAITEMENT: TRAITEMENT operateur TRAITEMENT
            |nombre
            |idf
  ;

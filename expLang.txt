@@ -16,13 +16,13 @@ ecrire("sami wa baka")#
 tantque(i>=j)
 faire
 A :=2 #
-B :=A/0#
-A :=C+D #
+B :=A #
+A :=6 #
 fait
 tantque(i>j)
 faire
 A :=2 #
-A :=C+D #
+A :=C #
 fait
 fin
 fonction sami2(b1:chaine.b3:entier):reel
@@ -31,12 +31,12 @@ debut
 tantque(i<=j)
 faire
 A :=2 #
-A :=C+D #
+A :=C #
 fait
 tantque(i<j)
 faire
 A :=2 #
-A :=C+D #
+A :=C #
 fait
 fin
 b[2].f:chaine#
@@ -44,16 +44,14 @@ b[2].f:chaine#
 
 
 debut
- sami[25]:=A+B#
+ sami[25]:=A#
 tantque(y!=v)
 faire
 A :=2 #
-A :=C+D #
-
-Tab[2] :=a+b/2 #
+A :=C #
+Tab[2] :=a #
 fait
-  f:=5#
-
+  f:=5 #
 Fonct1(x.y)#
 Fonct2(x)#
 Fonct3()#
@@ -61,6 +59,5 @@ lire()#
 lire(s)#
 LIRE(x.y) #
 return n#
-
 
 fin
